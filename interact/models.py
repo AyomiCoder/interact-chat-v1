@@ -10,5 +10,5 @@ class Profile(models.Model):
     def __str__(self):
         return self.name
 
-class Friend(models.Model):
-    pass
+# class Friend(models.Model):
+#     pass
