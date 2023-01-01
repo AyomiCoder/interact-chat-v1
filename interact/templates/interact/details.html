@@ -84,9 +84,10 @@
         </div>
     
         <form action="" id="myform" method="POST">
-            {% csrf_token %}
+            <!-- {% csrf_token %}
             
-            {{form.body}}
+            {{form.body}} -->
+            <input type="text" placeholder="type a message">
             
             <button type = "submit" id = "submit">Send</button>
         </form>
