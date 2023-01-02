@@ -10,72 +10,36 @@
      
       <div class="sub-main">
         <div class="main-user">
-          <img src="#" alt="profile picture" />
+          <img src="{{user.pic.url}}" alt="profile picture" />
         </div>
-        <p>username</p>
+        <p>{{request.user.username}}</p>
       </div>
     </div>
    
     <div class="header">Messages</div>
   
     <div class="friends-container"> 
-      <a href=" " style="color:black; text-decoration: none">
-      <div class="friends">
-        <div class="pic">
-          <img src="" alt="" />
-        </div>
-        <div class="name">
-          <h5>Ayomide Aluko</h5>
-          <p>How are you doing today</p>
-        </div>
-        <div class="time_new_msg">
-          <!-- {% comment %} <p>7:30am</p> {% endcomment %} -->
-  
-       <div class="msg">0</div>
-  
-          
-        </div>
-      </div>
+      {% for friend in friends %}
+      <a href=" {% url 'details' friend.profile.id %}" style="color:black; text-decoration: none">
+        <div class="friends">
+          <div class="pic">
+            <img src="{{friend.profile.pic.url}}" alt="friend-pic" />
+          </div>
+          <div class="name">
+            <h5>{{friend.profile.name}}</h5>
+            <p>How are you doing today</p>
+          </div>
+          <div class="time_new_msg">
+            <!-- {% comment %} <p>7:30am</p> {% endcomment %} -->
+    
+        <div class="msg">0</div>
+    
+            
+          </div>
+    </div>
   </a>
-
-  <a href=" " style="color:black; text-decoration: none">
-    <div class="friends">
-      <div class="pic">
-        <img src="" alt="" />
+  {% endfor %}
       </div>
-      <div class="name">
-        <h5>Ayomide Aluko</h5>
-        <p>How are you doing today</p>
-      </div>
-      <div class="time_new_msg">
-        <!-- {% comment %} <p>7:30am</p> {% endcomment %} -->
-
-     <div class="msg">0</div>
-
-        
-      </div>
-    </div>
-</a>
-
-<a href=" " style="color:black; text-decoration: none">
-  <div class="friends">
-    <div class="pic">
-      <img src="" alt="" />
-    </div>
-    <div class="name">
-      <h5>Ayomide Aluko</h5>
-      <p>How are you doing today</p>
-    </div>
-    <div class="time_new_msg">
-      <!-- {% comment %} <p>7:30am</p> {% endcomment %} -->
-
-   <div class="msg">0</div>
-
-      
-    </div>
-  </div>
-</a>
-    </div>
 
     
   
